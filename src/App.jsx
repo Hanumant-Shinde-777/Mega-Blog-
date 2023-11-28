@@ -3,7 +3,7 @@ import './App.css'
 
 function App() {
   
-console.log(import.meta.env.VITE_APPWRITE-URL);
+console.log( );
   return (
    <>
    <h1> A blog with appwrite </h1>
