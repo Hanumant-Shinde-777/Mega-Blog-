@@ -55,9 +55,21 @@ async createPost({title, slug, content, featuredImage, status, userId}){
         }
     }
 
-
     //Delete post Method
-
+    async deletePost(slug){
+        try {
+            await this.databases.deleteDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug
+            
+            )
+            return true
+        } catch (error) {
+            console.log("Appwrite serive :: deletePost :: error", error);
+            return false
+        }
+    }
 
 
 
