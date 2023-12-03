@@ -71,10 +71,25 @@ async createPost({title, slug, content, featuredImage, status, userId}){
         }
     }
 
+    //Created Get Post Slug
+    async getPost(slug){
+        try {
+            return await this.databases.getDocument(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                slug
+            
+            )
+        } catch (error) {
+            console.log("Appwrite serive :: getPost :: error", error);
+            return false
+        }
+    }
+
 
 
  }
 
 const service = new Service()
  export default service
- 4.8
+ 
