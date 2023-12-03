@@ -85,6 +85,21 @@ async createPost({title, slug, content, featuredImage, status, userId}){
             return false
         }
     }
+//Created Get Post Query
+async getPosts(queries = [Query.equal("status", "active")]){
+    try {
+        return await this.databases.listDocuments(
+            conf.appwriteDatabaseId,
+            conf.appwriteCollectionId,
+            queries,
+            
+
+        )
+    } catch (error) {
+        console.log("Appwrite serive :: getPosts :: error", error);
+        return false
+    }
+}
 
 
 
