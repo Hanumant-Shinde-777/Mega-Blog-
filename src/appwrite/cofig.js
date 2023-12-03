@@ -77,4 +77,4 @@ async createPost({title, slug, content, featuredImage, status, userId}){
 
 const service = new Service()
  export default service
- 
+ 4.8
