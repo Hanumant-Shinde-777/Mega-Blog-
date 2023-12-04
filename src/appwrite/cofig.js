@@ -100,7 +100,7 @@ async getPosts(queries = [Query.equal("status", "active")]){
         return false
     }
 }
-//file uploaded Method....
+//file uploaded Method....  4.11
 async uploadFile(file){
     try {
         return await this.bucket.createFile(
@@ -127,8 +127,13 @@ async deleteFile(fileId){
     }
 }
 
-
-
+//Get File Preview
+getFilePreview(fileId){
+    return this.bucket.getFilePreview(
+        conf.appwriteBucketId,
+        fileId
+    )
+}
  }
 
 const service = new Service()
