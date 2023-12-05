@@ -92,15 +92,14 @@ async getPosts(queries = [Query.equal("status", "active")]){
             conf.appwriteDatabaseId,
             conf.appwriteCollectionId,
             queries,
-            
-
+       
         )
     } catch (error) {
         console.log("Appwrite serive :: getPosts :: error", error);
         return false
     }
 }
-//file uploaded Method....  4.11
+//file uploaded Method.... 
 async uploadFile(file){
     try {
         return await this.bucket.createFile(
