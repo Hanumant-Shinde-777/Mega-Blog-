@@ -12,14 +12,12 @@ export default function RTE({name, control, label, defaultValue =""}) {
     name={name || "content"}
     control={control}
     render={({field: {onChange}}) => (
-       
         <Editor
         initialValue={defaultValue}
         init={{
             initialValue: defaultValue,
             height: 500,
             menubar: true,
-           
             plugins: [
                 "image",
                 "advlist",
@@ -42,12 +40,10 @@ export default function RTE({name, control, label, defaultValue =""}) {
                 "wordcount",
                 "anchor",
             ],
-
             toolbar:
             "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
             content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
         }}
-        
         onEditorChange={onChange}
         />
     )}

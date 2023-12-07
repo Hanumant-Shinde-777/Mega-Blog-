@@ -58,8 +58,6 @@ function Header() {
               </li>
             ) : null
             )}
-
-            {/* Checked Status  */}
             {authStatus && (
               <li>
                 <LogoutBtn />
