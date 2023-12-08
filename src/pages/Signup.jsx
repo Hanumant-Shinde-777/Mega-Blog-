@@ -1,6 +1,6 @@
 import React from 'react'
 import { Signup as SignupComponent } from '../components'
-
+//SignUp form
 function Signup() {
   return (
     <div className='py-8'>
