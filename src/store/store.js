@@ -1,3 +1,4 @@
+//imported pacakages 
 import {configureStore} from '@reduxjs/toolkit';
 import authSlice from './authSlice';
 
